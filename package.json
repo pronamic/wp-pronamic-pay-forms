@@ -11,10 +11,12 @@
   },
   "devDependencies": {
     "@wordpress/env": "^8.3.0",
-    "@wordpress/scripts": "^26.8.0"
+    "@wordpress/scripts": "^26.8.0",
+    "sass": "^1.63.6"
   },
   "scripts": {
     "start": "wp-scripts start --webpack-src-dir=blocks-jsx --output-path=blocks",
-    "build": "wp-scripts build --webpack-src-dir=blocks-jsx --output-path=blocks"
+    "build": "wp-scripts build --webpack-src-dir=blocks-jsx --output-path=blocks",
+    "sass": "sass scss:css"
   }
 }
