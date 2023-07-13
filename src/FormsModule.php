@@ -43,6 +43,12 @@ class FormsModule {
 		add_filter( 'pronamic_payment_source_url_' . FormsSource::PAYMENT_FORM, [ $this, 'source_url' ], 10, 2 );
 		add_filter( 'pronamic_payment_source_text_' . FormsSource::PAYMENT_FORM, [ $this, 'source_text' ], 10, 2 );
 		add_filter( 'pronamic_payment_source_description_' . FormsSource::PAYMENT_FORM, [ $this, 'source_description' ], 10, 2 );
+
+		// Blocks module.
+		if ( function_exists( 'register_block_type' ) ) {
+			$blocks_module = new BlocksModule();
+			$blocks_module->setup();
+		}
 	}
 
 	/**
