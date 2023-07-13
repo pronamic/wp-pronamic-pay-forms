@@ -302,7 +302,7 @@ class FormPostType {
 	 * @return void
 	 */
 	public function meta_box_form_options( $post ) {
-		include __DIR__ . '/../../views/meta-box-form-options.php';
+		include __DIR__ . '/../views/meta-box-form-options.php';
 	}
 
 	/**
