@@ -17,6 +17,7 @@
   "scripts": {
     "start": "wp-scripts start --webpack-src-dir=blocks-jsx --output-path=blocks",
     "build": "wp-scripts build --webpack-src-dir=blocks-jsx --output-path=blocks",
-    "sass": "sass scss:css"
+    "sass": "sass scss:css",
+    "cssmin": "cleancss -o css/forms.min.css css/forms.css"
   }
 }
