@@ -1,0 +1,20 @@
+{
+    "name": "pronamic/wp-pronamic-pay-forms",
+    "description": "The Pronamic Pay forms module.",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later" ,
+    "autoload": {
+        "psr-4": {
+            "Pronamic\\WordPress\\Pay\\Forms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pronamic",
+            "email": "info@pronamic.eu"
+        }
+    ],
+    "require": {
+        "wp-pay/core": "^4.9"
+    }
+}

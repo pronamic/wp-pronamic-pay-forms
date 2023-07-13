@@ -1,0 +1,442 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "6b6904c6b78a6be4b1eef403d040f2e3",
+    "packages": [
+        {
+            "name": "pronamic/wp-datetime",
+            "version": "v2.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pronamic/wp-datetime.git",
+                "reference": "6b39397d8f28c199bda0a5009b6e922fa35030bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pronamic/wp-datetime/zipball/6b39397d8f28c199bda0a5009b6e922fa35030bc",
+                "reference": "6b39397d8f28c199bda0a5009b6e922fa35030bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "automattic/wordbless": "^0.3 || ^0.4",
+                "bamarni/composer-bin-plugin": "^1.4",
+                "koodimonni-language/de_de": "*",
+                "koodimonni-language/en_gb": "*",
+                "koodimonni-language/fr_fr": "*",
+                "koodimonni-language/ja": "*",
+                "koodimonni-language/nl_nl": "*",
+                "php-coveralls/php-coveralls": "^2.4",
+                "php-stubs/wordpress-globals": "^0.2.0",
+                "phpmd/phpmd": "^2.9",
+                "pronamic/wp-coding-standards": "^1.3",
+                "pronamic/wp-deployer": "^1.1",
+                "roots/wordpress": "^6.0",
+                "vlucas/phpdotenv": "^2.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Pronamic\\WordPress\\DateTime\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "WordPress DateTime library.",
+            "support": {
+                "issues": "https://github.com/pronamic/wp-datetime/issues",
+                "source": "https://github.com/pronamic/wp-datetime/tree/v2.1.4"
+            },
+            "time": "2023-03-27T08:59:06+00:00"
+        },
+        {
+            "name": "pronamic/wp-html",
+            "version": "v2.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pronamic/wp-html.git",
+                "reference": "752ac59c4772c81fea9942fe2475aa6aceb99816"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pronamic/wp-html/zipball/752ac59c4772c81fea9942fe2475aa6aceb99816",
+                "reference": "752ac59c4772c81fea9942fe2475aa6aceb99816",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "automattic/wordbless": "^0.3 || ^0.4",
+                "bamarni/composer-bin-plugin": "^1.4",
+                "php-coveralls/php-coveralls": "^2.4",
+                "php-stubs/wordpress-globals": "^0.2.0",
+                "phpmd/phpmd": "^2.9",
+                "pronamic/wp-coding-standards": "^1.3",
+                "pronamic/wp-deployer": "^1.1",
+                "roots/wordpress": "^6.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Pronamic\\WordPress\\Html\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "WordPress HTML library.",
+            "support": {
+                "issues": "https://github.com/pronamic/wp-html/issues",
+                "source": "https://github.com/pronamic/wp-html/tree/v2.1.3"
+            },
+            "time": "2023-03-27T09:00:14+00:00"
+        },
+        {
+            "name": "pronamic/wp-http",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pronamic/wp-http.git",
+                "reference": "2b0ce3ca663103b8a30101ff5bff9254ee4da093"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pronamic/wp-http/zipball/2b0ce3ca663103b8a30101ff5bff9254ee4da093",
+                "reference": "2b0ce3ca663103b8a30101ff5bff9254ee4da093",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "automattic/wordbless": "^0.3 || ^0.4",
+                "bamarni/composer-bin-plugin": "^1.4",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpmd/phpmd": "^2.9",
+                "pronamic/wp-coding-standards": "^1.3",
+                "pronamic/wp-deployer": "^1.1",
+                "roots/wordpress": "^6.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Pronamic\\WordPress\\Http\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "WordPress HTTP library.",
+            "support": {
+                "issues": "https://github.com/pronamic/wp-http/issues",
+                "source": "https://github.com/pronamic/wp-http/tree/v1.2.2"
+            },
+            "time": "2023-03-27T09:01:36+00:00"
+        },
+        {
+            "name": "pronamic/wp-money",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pronamic/wp-money.git",
+                "reference": "554fcfb8b229fade8f08e7268dfe04ebeb9b18d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pronamic/wp-money/zipball/554fcfb8b229fade8f08e7268dfe04ebeb9b18d7",
+                "reference": "554fcfb8b229fade8f08e7268dfe04ebeb9b18d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "pronamic/wp-number": "^1.3"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4",
+                "koodimonni-language/de_de": "*",
+                "koodimonni-language/fr_fr": "*",
+                "koodimonni-language/nl_nl": "*",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpmd/phpmd": "^2.4",
+                "pronamic/wp-coding-standards": "^1.3",
+                "pronamic/wp-deployer": "^1.0",
+                "roots/wordpress": "^6.0",
+                "vlucas/phpdotenv": "^2.0",
+                "wp-phpunit/wp-phpunit": "^6.1",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Pronamic\\WordPress\\Money\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "WordPress Money library.",
+            "support": {
+                "issues": "https://github.com/pronamic/wp-money/issues",
+                "source": "https://github.com/pronamic/wp-money/tree/v2.4.0"
+            },
+            "time": "2023-03-21T15:43:15+00:00"
+        },
+        {
+            "name": "pronamic/wp-number",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pronamic/wp-number.git",
+                "reference": "d458eb39b216fb9e61b4ddbca8db52897f81e24e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pronamic/wp-number/zipball/d458eb39b216fb9e61b4ddbca8db52897f81e24e",
+                "reference": "d458eb39b216fb9e61b4ddbca8db52897f81e24e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4",
+                "koodimonni-language/de_de": "*",
+                "koodimonni-language/fr_fr": "*",
+                "koodimonni-language/nl_nl": "*",
+                "overtrue/phplint": "^4.5",
+                "php-coveralls/php-coveralls": "^2.5",
+                "phpmd/phpmd": "^2.13",
+                "pronamic/wp-coding-standards": "^1.3",
+                "pronamic/wp-deployer": "^1.2",
+                "roots/wordpress": "^6.0",
+                "wp-phpunit/wp-phpunit": "^6.1",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Pronamic\\WordPress\\Number\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pronamic",
+                    "email": "info@pronamic.eu",
+                    "homepage": "https://www.pronamic.eu/",
+                    "role": "Company"
+                },
+                {
+                    "name": "Remco Tolsma",
+                    "email": "info@remcotolsma.nl",
+                    "homepage": "https://www.remcotolsma.nl/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "WordPress Number library.",
+            "keywords": [
+                "Double",
+                "calculator",
+                "float",
+                "i18n",
+                "int",
+                "number",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/pronamic/wp-number/issues",
+                "source": "https://github.com/pronamic/wp-number/tree/v1.3.0"
+            },
+            "time": "2023-03-21T11:18:55+00:00"
+        },
+        {
+            "name": "viison/address-splitter",
+            "version": "0.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pickware/address-splitter.git",
+                "reference": "ebad709276aaadce94a3a1fe2507aa38a467a94a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pickware/address-splitter/zipball/ebad709276aaadce94a3a1fe2507aa38a467a94a",
+                "reference": "ebad709276aaadce94a3a1fe2507aa38a467a94a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "VIISON\\AddressSplitter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "VIISON GmbH",
+                    "email": "contact@viison.com"
+                }
+            ],
+            "description": "Tries to split an address line into street name, house number and other additional information like building, apartment information etc.",
+            "support": {
+                "issues": "https://github.com/pickware/address-splitter/issues",
+                "source": "https://github.com/pickware/address-splitter/tree/0.3.4"
+            },
+            "time": "2019-10-24T09:23:47+00:00"
+        },
+        {
+            "name": "woocommerce/action-scheduler",
+            "version": "3.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woocommerce/action-scheduler.git",
+                "reference": "7fd383cad3d64b419ec81bcd05bab44355a6e6ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woocommerce/action-scheduler/zipball/7fd383cad3d64b419ec81bcd05bab44355a6e6ef",
+                "reference": "7fd383cad3d64b419ec81bcd05bab44355a6e6ef",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5",
+                "woocommerce/woocommerce-sniffs": "0.1.0",
+                "wp-cli/wp-cli": "~2.5.0",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "scripts-description": {
+                    "test": "Run unit tests",
+                    "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+                    "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "Action Scheduler for WordPress and WooCommerce",
+            "homepage": "https://actionscheduler.org/",
+            "support": {
+                "issues": "https://github.com/woocommerce/action-scheduler/issues",
+                "source": "https://github.com/woocommerce/action-scheduler/tree/3.6.1"
+            },
+            "time": "2023-06-14T19:23:12+00:00"
+        },
+        {
+            "name": "wp-pay/core",
+            "version": "v4.9.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pronamic/wp-pay-core.git",
+                "reference": "50e53ec1e3ab8df7bf4541cdb6ca6e483ec8c5c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pronamic/wp-pay-core/zipball/50e53ec1e3ab8df7bf4541cdb6ca6e483ec8c5c7",
+                "reference": "50e53ec1e3ab8df7bf4541cdb6ca6e483ec8c5c7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
+                "php": ">=7.4",
+                "pronamic/wp-datetime": "^2.1",
+                "pronamic/wp-html": "^2.1",
+                "pronamic/wp-http": "^1.2",
+                "pronamic/wp-money": "^2.3",
+                "pronamic/wp-number": "^1.3",
+                "viison/address-splitter": "^0.3.4",
+                "woocommerce/action-scheduler": "^3.4"
+            },
+            "require-dev": {
+                "automattic/wordbless": "^0.4.2",
+                "bamarni/composer-bin-plugin": "^1.4",
+                "overtrue/phplint": "^4.5",
+                "php-coveralls/php-coveralls": "^2.4",
+                "php-stubs/wordpress-globals": "^0.2.0",
+                "php-stubs/wp-cli-stubs": "^2.4",
+                "phpmd/phpmd": "^2.9",
+                "pronamic/pronamic-cli": "^1.0",
+                "pronamic/wp-coding-standards": "^1.3",
+                "roots/wordpress": "^6.0",
+                "wp-cli/wp-cli": "^2.3",
+                "wp-phpunit/wp-phpunit": "^6.1",
+                "yoast/phpunit-polyfills": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "files": [
+                    "includes/functions.php"
+                ],
+                "psr-4": {
+                    "Pronamic\\WordPress\\Pay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pronamic",
+                    "email": "info@pronamic.eu",
+                    "homepage": "https://www.pronamic.eu/",
+                    "role": "Company"
+                },
+                {
+                    "name": "Remco Tolsma",
+                    "email": "info@remcotolsma.nl",
+                    "homepage": "https://www.remcotolsma.nl/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Core components for the WordPress payment processing library.",
+            "homepage": "https://www.wp-pay.org/",
+            "keywords": [
+                "core",
+                "gateway",
+                "pay",
+                "pronamic",
+                "wordpress",
+                "wp"
+            ],
+            "support": {
+                "email": "support@wp-pay.org",
+                "issues": "https://github.com/wp-pay/core/issues",
+                "source": "https://github.com/wp-pay/core"
+            },
+            "time": "2023-07-12T08:39:48+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
