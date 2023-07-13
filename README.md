@@ -1,2 +1,3 @@
-# wp-pronamic-pay-forms
+# Pronamic Pay Forms
+
 The Pronamic Pay forms module.
