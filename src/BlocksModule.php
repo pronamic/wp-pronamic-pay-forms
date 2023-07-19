@@ -27,6 +27,22 @@ use WP_Error;
  */
 class BlocksModule {
 	/**
+	 * Forms integration.
+	 *
+	 * @var Integration
+	 */
+	private $integration;
+
+	/**
+	 * Constructs and initializes a blocks module.
+	 *
+	 * @param Integration $integration Reference to the forms integration.
+	 */
+	public function __construct( Integration $integration ) {
+		$this->integration = $integration;
+	}
+
+	/**
 	 * Setup.
 	 *
 	 * @return void
@@ -171,7 +187,7 @@ class BlocksModule {
 		$this->enqueue_styles();
 
 		// Return form output.
-		return pronamic_pay_plugin()->forms_module->get_form_output( $args );
+		return $this->integration->get_form_output( $args );
 	}
 
 	/**

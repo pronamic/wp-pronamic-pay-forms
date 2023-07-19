@@ -1,6 +1,6 @@
 <?php
 /**
- * Forms Module
+ * Forms Integration
  *
  * @author    Pronamic <info@pronamic.eu>
  * @copyright 2005-2023 Pronamic
@@ -11,20 +11,42 @@
 namespace Pronamic\WordPress\Pay\Forms;
 
 use Pronamic\WordPress\Number\Number;
+use Pronamic\WordPress\Pay\AbstractPluginIntegration;
 use Pronamic\WordPress\Pay\Payments\Payment;
 
 /**
- * Forms Module
+ * Forms Integration
  *
  * @author Remco Tolsma
  * @version 2.2.6
  * @since 3.7.0
  */
-class FormsModule {
+class Integration extends AbstractPluginIntegration {
 	/**
 	 * Construct and initialize a forms module object.
 	 */
 	public function __construct() {
+		parent::__construct(
+			[
+				'name'    => __( 'Pronamic Pay Forms', 'pronamic_ideal' ),
+				'version' => '1.0.1',
+			]
+		);
+
+		// Upgrades.
+		$version = $this->get_version();
+
+		$upgrades = $this->get_upgrades();
+
+		$upgrades->add( new Install( null === $version ? '1.0.0' : $version ) );
+	}
+
+	/**
+	 * Setup integration.
+	 *
+	 * @return void
+	 */
+	public function setup() {
 		// Form Post Type.
 		new FormPostType();
 
@@ -43,11 +65,19 @@ class FormsModule {
 		add_filter( 'pronamic_payment_source_url_' . FormsSource::PAYMENT_FORM, [ $this, 'source_url' ], 10, 2 );
 		add_filter( 'pronamic_payment_source_text_' . FormsSource::PAYMENT_FORM, [ $this, 'source_text' ], 10, 2 );
 		add_filter( 'pronamic_payment_source_description_' . FormsSource::PAYMENT_FORM, [ $this, 'source_description' ], 10, 2 );
+		add_filter( 'pronamic_payment_source_description_' . FormsSource::PAYMENT_FORM, [ $this, 'source_description' ], 10, 2 );
 
 		// Blocks module.
 		if ( function_exists( 'register_block_type' ) ) {
-			$blocks_module = new BlocksModule();
+			$blocks_module = new BlocksModule( $this );
 			$blocks_module->setup();
+		}
+
+		/**
+		 * Admin
+		 */
+		if ( \is_admin() ) {
+			new Admin();
 		}
 	}
 
