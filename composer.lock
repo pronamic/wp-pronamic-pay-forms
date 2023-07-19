@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b6904c6b78a6be4b1eef403d040f2e3",
+    "content-hash": "8d1dcbeb342b734c60c6ede3d04b6c3e",
     "packages": [
         {
             "name": "pronamic/wp-datetime",
@@ -345,16 +345,16 @@
         },
         {
             "name": "wp-pay/core",
-            "version": "v4.9.4",
+            "version": "v4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pay-core.git",
-                "reference": "50e53ec1e3ab8df7bf4541cdb6ca6e483ec8c5c7"
+                "reference": "113ab4744d96dbccf33f6e105fad96579b93ce2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pay-core/zipball/50e53ec1e3ab8df7bf4541cdb6ca6e483ec8c5c7",
-                "reference": "50e53ec1e3ab8df7bf4541cdb6ca6e483ec8c5c7",
+                "url": "https://api.github.com/repos/pronamic/wp-pay-core/zipball/113ab4744d96dbccf33f6e105fad96579b93ce2d",
+                "reference": "113ab4744d96dbccf33f6e105fad96579b93ce2d",
                 "shasum": ""
             },
             "require": {
@@ -427,7 +427,7 @@
                 "issues": "https://github.com/wp-pay/core/issues",
                 "source": "https://github.com/wp-pay/core"
             },
-            "time": "2023-07-12T08:39:48+00:00"
+            "time": "2023-07-18T07:31:50+00:00"
         }
     ],
     "packages-dev": [],
