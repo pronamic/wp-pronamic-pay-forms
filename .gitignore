@@ -1,5 +1,10 @@
-# Node.js
-/node_modules/
+# Build
+/build/
 
 # Composer
+/composer.lock
 /vendor/
+
+# Node.js
+/package-lock.json
+/node_modules/
