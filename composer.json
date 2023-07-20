@@ -15,6 +15,7 @@
         }
     ],
     "require": {
+		"pronamic/pronamic-cli": "dev-main",
         "wp-pay/core": "^4.10"
     }
 }
