@@ -15,12 +15,20 @@
         }
     ],
 	"config": {
-        "wp-slug": "wp-pronamic-pay-forms"
+        "wp-slug": "wp-pronamic-pay-forms",
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "require": {
         "wp-pay/core": "^4.10"
     },
     "require-dev": {
-        "pronamic/pronamic-cli": "dev-main"
+        "pronamic/pronamic-cli": "dev-main",
+        "pronamic/wp-coding-standards": "^1.3"
+    },
+    "scripts": {
+        "phpcbf": "XDEBUG_MODE=off vendor/bin/phpcbf",
+		"phpcs": "XDEBUG_MODE=off vendor/bin/phpcs -s -v"
     }
 }
