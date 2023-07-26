@@ -41,7 +41,7 @@ $currency = Currency::get_instance( 'EUR' );
 
 // First payment method.
 $payment_methods = $gateway->get_payment_methods(
-	[ 
+	[
 		'status' => [
 			'',
 			'active',
@@ -261,8 +261,6 @@ $payment_method_default = \reset( $payment_methods );
 		<?php endif; ?>
 
 		<div class="pronamic-pay-submit-button-wrap pronamic-pay-clearfix">
-			<?php wp_nonce_field( 'pronamic_pay', 'pronamic_pay_nonce' ); ?>
-
 			<?php
 
 			$fields = [

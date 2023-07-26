@@ -75,14 +75,8 @@ class FormProcessor {
 
 		$pronamic_pay_errors = [];
 
-		// Nonce.
-		if ( ! \array_key_exists( 'pronamic_pay_nonce', $_POST ) ) {
-			return;
-		}
-
-		$nonce = \sanitize_text_field( \wp_unslash( $_POST['pronamic_pay_nonce'] ) );
-
-		if ( ! wp_verify_nonce( $nonce, 'pronamic_pay' ) ) {
+		// Form submit.
+		if ( ! \array_key_exists( 'pronamic_pay', $_POST ) ) {
 			return;
 		}
 
