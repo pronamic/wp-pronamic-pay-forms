@@ -52,7 +52,7 @@ class FormScripts {
 			'pronamic-pay-forms',
 			plugins_url( $file, __DIR__ ),
 			[],
-			\hash_file( 'crc32b', __DIR__. '/../' . $file ),
+			\hash_file( 'crc32b', __DIR__ . '/../' . $file ),
 		);
 	}
 
