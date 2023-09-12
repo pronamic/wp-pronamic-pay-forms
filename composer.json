@@ -15,7 +15,7 @@
         }
     ],
 	"config": {
-        "wp-slug": "wp-pronamic-pay-forms",
+        "wp-slug": "pronamic-pay-forms",
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
