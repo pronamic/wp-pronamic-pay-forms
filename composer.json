@@ -15,10 +15,10 @@
         }
     ],
 	"config": {
-        "wp-slug": "pronamic-pay-forms",
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+        },
+        "wp-slug": "pronamic-pay-forms"
     },
     "require": {
         "wp-pay/core": "^4.10"
