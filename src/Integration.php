@@ -28,7 +28,7 @@ class Integration extends AbstractPluginIntegration {
 	public function __construct() {
 		parent::__construct(
 			[
-				'name'                => __( 'Pronamic Pay Forms', 'pronamic_ideal' ),
+				'name'                => 'Pronamic Pay Forms',
 				'version'             => '1.0.1',
 				'version_option_name' => 'pronamic_pay_forms_version',
 			]
