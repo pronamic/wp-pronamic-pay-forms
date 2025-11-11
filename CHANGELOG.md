@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.4] - 2025-11-11
+
+### Commits
+
+- Added this point we shoud not use translation functions. ([04e053d](https://github.com/pronamic/wp-pronamic-pay-forms/commit/04e053d1944dea1aa421d67487ee2ffb07163c71))
+
+Full set of changes: [`1.1.3...1.1.4`][1.1.4]
+
+[1.1.4]: https://github.com/pronamic/wp-pronamic-pay-forms/compare/v1.1.3...v1.1.4
+
 ## [1.1.3] - 2024-12-17
 
 ### Commits
