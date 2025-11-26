@@ -190,7 +190,7 @@ class FormProcessor {
 		// Set line properties.
 		$line->set_id( strval( $order_id ) );
 		$line->set_name( $description );
-		$line->set_quantity( 1 );
+		$line->set_quantity( new Number( 1 ) );
 		$line->set_unit_price( $payment->get_total_amount() );
 		$line->set_total_amount( $payment->get_total_amount() );
 
