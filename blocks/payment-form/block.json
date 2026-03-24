@@ -1,4 +1,6 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
   "name": "pronamic-pay/payment-form",
   "title": "Payment Form",
   "category": "pronamic-pay",
