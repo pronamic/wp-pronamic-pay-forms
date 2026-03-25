@@ -1,0 +1,21 @@
+{
+	"core": null,
+	"config": {
+		"SAVEQUERIES": true,
+		"SCRIPT_DEBUG": true,
+		"WP_DEBUG_LOG": true,
+		"WPLANG": "nl_NL"
+	},
+	"plugins": [
+		"pronamic/wp-env-quick-login",
+		"https://downloads.wordpress.org/plugin/plugin-check.zip",
+		"https://downloads.wordpress.org/plugin/pronamic-client.zip",
+		"https://downloads.wordpress.org/plugin/pronamic-ideal.zip",
+		"https://downloads.wordpress.org/plugin/query-monitor.zip"
+	],
+	"mappings": {
+		"wp-content/plugins/pronamic-pay-forms-dev": "./",
+		"wp-content/plugins/pronamic-pay-forms": "./"
+	},
+	"testsEnvironment": false
+}
