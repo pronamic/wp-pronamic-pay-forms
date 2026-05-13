@@ -11,7 +11,7 @@
  * Plugin Name:       Pronamic Pay Forms
  * Plugin URI:        https://www.pronamic.com/
  * Description:       A modern WordPress plugin for Pronamic Pay Forms, providing a structured foundation for building scalable and maintainable plugins.
- * Version:           1.0.0
+ * Version:           1.3.0
  * Requires at least: 6.7
  * Requires PHP:      8.2
  * Author:            Pronamic
