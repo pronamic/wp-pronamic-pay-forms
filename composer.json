@@ -23,7 +23,7 @@
 	},
 	"require": {
 		"wp-pay/core": "^4.10",
-		"automattic/jetpack-autoloader": "^5.0"
+		"automattic/jetpack-autoloader": "^5.0 || ^6.0"
 	},
 	"require-dev": {
 		"pronamic/pronamic-cli": "^1.0",
