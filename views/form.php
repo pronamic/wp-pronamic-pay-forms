@@ -15,6 +15,7 @@ use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Pay\Core\PaymentMethods;
 use Pronamic\WordPress\Pay\Core\SelectField;
 use Pronamic\WordPress\Pay\Forms\FormPostType;
+use Pronamic\WordPress\Pay\Forms\FormProcessor;
 use Pronamic\WordPress\Pay\Forms\FormsSource;
 use Pronamic\WordPress\Pay\Plugin;
 use Pronamic\WordPress\Pay\Util;
@@ -268,11 +269,6 @@ $payment_method_default = \reset( $payment_methods );
 				'pronamic_pay_source_id' => $settings['source_id'],
 			];
 
-			// Add config ID when needed.
-			if ( FormsSource::PAYMENT_FORM !== $settings['source'] ) {
-				$fields['pronamic_pay_config_id'] = $settings['config_id'];
-			}
-
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo Util::html_hidden_fields( $fields );
 
@@ -280,7 +276,15 @@ $payment_method_default = \reset( $payment_methods );
 
 			<?php if ( FormPostType::AMOUNT_METHOD_INPUT_FIXED === $settings['amount_method'] ) : ?>
 
-				<input type="hidden" name="pronamic_pay_amount" value="<?php echo esc_attr( array_shift( $settings['amounts'] ) ); ?>" />
+				<?php $fixed_amount = array_shift( $settings['amounts'] ); ?>
+
+				<input type="hidden" name="pronamic_pay_amount" value="<?php echo esc_attr( $fixed_amount ); ?>" />
+
+				<?php if ( null !== $fixed_amount && FormsSource::PAYMENT_FORM !== $settings['source'] ) : ?>
+
+					<input type="hidden" name="pronamic_pay_amount_hash" value="<?php echo esc_attr( FormProcessor::get_amount_hash( $settings['source'], (int) $settings['source_id'], new Money( $fixed_amount, $currency ) ) ); ?>" />
+
+				<?php endif; ?>
 
 			<?php endif; ?>
 
