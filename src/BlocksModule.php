@@ -145,8 +145,6 @@ class BlocksModule {
 			return \__( 'It is currently not possible to pay via this form, please contact us for more information (error: no payment gateway found).', 'pronamic-pay-forms' );
 		}
 
-		$this->enqueue_styles();
-
 		// Return form output.
 		return $this->integration->get_form_output( $args );
 	}
