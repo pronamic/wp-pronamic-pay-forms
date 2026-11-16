@@ -28,6 +28,7 @@
 	"require-dev": {
 		"pronamic/pronamic-cli": "^1.0",
 		"pronamic/wp-coding-standards": "^2.5",
+		"rector/rector": "^2.8",
 		"roots/wordpress-no-content": "^6.9",
 		"wp-cli/dist-archive-command": "*",
 		"wp-cli/wp-cli-bundle": "*"
