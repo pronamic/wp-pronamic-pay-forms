@@ -1,0 +1,272 @@
+# Copyright (C) 2026 Pronamic
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pronamic Pay Forms 1.3.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pronamic-pay-forms\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-16T11:41:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: pronamic-pay-forms\n"
+
+#. Plugin Name of the plugin
+#: pronamic-pay-forms.php:11
+msgid "Pronamic Pay Forms"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: pronamic-pay-forms.php:12
+#: pronamic-pay-forms.php:18
+msgid "https://www.pronamic.eu/"
+msgstr ""
+
+#. Description of the plugin
+#: pronamic-pay-forms.php:13
+msgid "A modern WordPress plugin for Pronamic Pay Forms, providing a structured foundation for building scalable and maintainable plugins."
+msgstr ""
+
+#. Author of the plugin
+#: pronamic-pay-forms.php:17
+msgid "Pronamic"
+msgstr ""
+
+#: src/Admin.php:33
+#: src/FormPostType.php:99
+#: src/FormPostType.php:101
+#: src/FormPostType.php:112
+msgid "Payment Forms"
+msgstr ""
+
+#: src/Admin.php:34
+msgid "Forms"
+msgstr ""
+
+#: src/BlocksModule.php:84
+msgctxt "Block"
+msgid "Payment Form"
+msgstr ""
+
+#: src/BlocksModule.php:85
+msgid "Add form"
+msgstr ""
+
+#: src/BlocksModule.php:86
+#: views/form.php:92
+#: views/meta-box-form-options.php:58
+msgid "Amount"
+msgstr ""
+
+#: src/BlocksModule.php:145
+msgid "It is currently not possible to pay via this form, please contact us for more information (error: no payment gateway found)."
+msgstr ""
+
+#: src/BlocksModule.php:161
+#: src/BlocksModule.php:192
+msgid "Payment Form Block"
+msgstr ""
+
+#: src/FormPostType.php:102
+#: src/Integration.php:202
+#: src/Integration.php:233
+msgid "Payment Form"
+msgstr ""
+
+#: src/FormPostType.php:103
+msgid "Add New"
+msgstr ""
+
+#: src/FormPostType.php:104
+msgid "Add New Payment Form"
+msgstr ""
+
+#: src/FormPostType.php:105
+msgid "Edit Payment Form"
+msgstr ""
+
+#: src/FormPostType.php:106
+msgid "New Payment Form"
+msgstr ""
+
+#: src/FormPostType.php:107
+msgid "All Payment Forms"
+msgstr ""
+
+#: src/FormPostType.php:108
+msgid "View Payment Form"
+msgstr ""
+
+#: src/FormPostType.php:109
+msgid "Search Payment Forms"
+msgstr ""
+
+#: src/FormPostType.php:110
+msgid "No payment forms found."
+msgstr ""
+
+#: src/FormPostType.php:111
+msgid "No payment forms found in Trash."
+msgstr ""
+
+#: src/FormPostType.php:113
+msgid "Filter payment forms list"
+msgstr ""
+
+#: src/FormPostType.php:114
+msgid "Payment forms list navigation"
+msgstr ""
+
+#: src/FormPostType.php:115
+msgid "Payment forms list"
+msgstr ""
+
+#: src/FormPostType.php:121
+msgid "Payment form published."
+msgstr ""
+
+#: src/FormPostType.php:122
+msgid "Payment form published privately."
+msgstr ""
+
+#: src/FormPostType.php:123
+msgid "Payment form reverted to draft."
+msgstr ""
+
+#: src/FormPostType.php:124
+msgid "Payment form scheduled."
+msgstr ""
+
+#: src/FormPostType.php:125
+msgid "Payment form updated."
+msgstr ""
+
+#: src/FormPostType.php:138
+msgctxt "slug"
+msgid "payment-forms"
+msgstr ""
+
+#: src/FormPostType.php:156
+msgid "Title"
+msgstr ""
+
+#: src/FormPostType.php:157
+#: views/meta-box-form-options.php:25
+msgid "Gateway"
+msgstr ""
+
+#: src/FormPostType.php:158
+msgid "Payments"
+msgstr ""
+
+#: src/FormPostType.php:159
+msgid "Earnings"
+msgstr ""
+
+#: src/FormPostType.php:160
+msgid "Shortcode"
+msgstr ""
+
+#: src/FormPostType.php:161
+msgid "Date"
+msgstr ""
+
+#: src/FormPostType.php:289
+msgid "Form Options"
+msgstr ""
+
+#: src/FormPostType.php:413
+msgid "Shortcode:"
+msgstr ""
+
+#. translators: %s: order id
+#: src/FormProcessor.php:220
+#, php-format
+msgid "Payment Form %s"
+msgstr ""
+
+#. translators: %s: payment data title
+#: src/FormProcessor.php:229
+#, php-format
+msgid "Payment for %s"
+msgstr ""
+
+#: src/FormProcessor.php:328
+msgid "Please enter a valid amount"
+msgstr ""
+
+#: src/FormProcessor.php:338
+msgid "Please enter your first name"
+msgstr ""
+
+#: src/FormProcessor.php:348
+msgid "Please enter a valid email address"
+msgstr ""
+
+#: src/Integration.php:160
+#: views/meta-box-form-options.php:52
+msgid "Pay Now"
+msgstr ""
+
+#: views/form.php:149
+msgid "Personal Info"
+msgstr ""
+
+#: views/form.php:153
+#: views/form.php:156
+msgid "First Name"
+msgstr ""
+
+#: views/form.php:161
+#: views/form.php:164
+msgid "Last Name"
+msgstr ""
+
+#: views/form.php:169
+#: views/form.php:173
+msgid "Email Address"
+msgstr ""
+
+#: views/form.php:178
+msgid "Payment Info"
+msgstr ""
+
+#. translators: %s: Exception message.
+#: views/form.php:227
+#, php-format
+msgid "This field could not be displayed due to the following error message: \"%s\"."
+msgstr ""
+
+#: views/form.php:255
+msgid "Error"
+msgstr ""
+
+#: views/meta-box-form-options.php:46
+msgid "Button Text"
+msgstr ""
+
+#: views/meta-box-form-options.php:68
+msgid "Show as input field"
+msgstr ""
+
+#: views/meta-box-form-options.php:69
+msgid "Show as choices"
+msgstr ""
+
+#: views/meta-box-form-options.php:70
+msgid "Show as choices with input field"
+msgstr ""
+
+#: views/meta-box-form-options.php:121
+msgid "Transaction description"
+msgstr ""
+
+#: blocks-jsx/payment-form/block.json
+#: blocks/payment-form/block.json
+msgctxt "block title"
+msgid "Payment Form"
+msgstr ""
