@@ -22,7 +22,7 @@
 		"wp-slug": "pronamic-pay-forms"
 	},
 	"require": {
-		"wp-pay/core": "^4.10",
+		"wp-pay/core": "^4.35",
 		"automattic/jetpack-autoloader": "^5.0 || ^6.0"
 	},
 	"require-dev": {
