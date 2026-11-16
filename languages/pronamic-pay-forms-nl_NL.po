@@ -1,0 +1,260 @@
+# Copyright (C) 2026 Pronamic
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pronamic Pay Forms 1.3.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pronamic-pay-forms\n"
+"POT-Creation-Date: 2026-11-16T11:41:09+00:00\n"
+"PO-Revision-Date: 2026-11-16 12:41+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.10\n"
+"X-Domain: pronamic-pay-forms\n"
+
+#. Plugin Name of the plugin
+#: pronamic-pay-forms.php:11
+msgid "Pronamic Pay Forms"
+msgstr "Pronamic Pay Forms"
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: pronamic-pay-forms.php:12 pronamic-pay-forms.php:18
+msgid "https://www.pronamic.eu/"
+msgstr "https://www.pronamic.nl/"
+
+#. Description of the plugin
+#: pronamic-pay-forms.php:13
+msgid "A modern WordPress plugin for Pronamic Pay Forms, providing a structured foundation for building scalable and maintainable plugins."
+msgstr "Een moderne WordPress-plugin voor Pronamic Pay Forms, die een gestructureerde basis biedt voor het bouwen van schaalbare en onderhoudbare plugins."
+
+#. Author of the plugin
+#: pronamic-pay-forms.php:17
+msgid "Pronamic"
+msgstr "Pronamic"
+
+#: src/Admin.php:33 src/FormPostType.php:99 src/FormPostType.php:101
+#: src/FormPostType.php:112
+msgid "Payment Forms"
+msgstr "Betaalformulieren"
+
+#: src/Admin.php:34
+msgid "Forms"
+msgstr "Formulieren"
+
+#: src/BlocksModule.php:84
+msgctxt "Block"
+msgid "Payment Form"
+msgstr "Betaalformulier"
+
+#: src/BlocksModule.php:85
+msgid "Add form"
+msgstr "Formulier toevoegen"
+
+#: src/BlocksModule.php:86 views/form.php:92 views/meta-box-form-options.php:58
+msgid "Amount"
+msgstr "Bedrag"
+
+#: src/BlocksModule.php:145
+msgid "It is currently not possible to pay via this form, please contact us for more information (error: no payment gateway found)."
+msgstr "Het is momenteel niet mogelijk om via dit formulier te betalen, neem contact met ons op voor meer informatie (fout: geen betaalgateway gevonden)."
+
+#: src/BlocksModule.php:161 src/BlocksModule.php:192
+msgid "Payment Form Block"
+msgstr "Betaalformulierblok"
+
+#: src/FormPostType.php:102 src/Integration.php:202 src/Integration.php:233
+msgid "Payment Form"
+msgstr "Betaalformulier"
+
+#: src/FormPostType.php:103
+msgid "Add New"
+msgstr "Nieuwe toevoegen"
+
+#: src/FormPostType.php:104
+msgid "Add New Payment Form"
+msgstr "Nieuw betaalformulier toevoegen"
+
+#: src/FormPostType.php:105
+msgid "Edit Payment Form"
+msgstr "Betaalformulier bewerken"
+
+#: src/FormPostType.php:106
+msgid "New Payment Form"
+msgstr "Nieuw betaalformulier"
+
+#: src/FormPostType.php:107
+msgid "All Payment Forms"
+msgstr "Alle betaalformulieren"
+
+#: src/FormPostType.php:108
+msgid "View Payment Form"
+msgstr "Betaalformulier bekijken"
+
+#: src/FormPostType.php:109
+msgid "Search Payment Forms"
+msgstr "Betaalformulieren zoeken"
+
+#: src/FormPostType.php:110
+msgid "No payment forms found."
+msgstr "Geen betaalformulieren gevonden."
+
+#: src/FormPostType.php:111
+msgid "No payment forms found in Trash."
+msgstr "Geen betaalformulieren gevonden in de prullenbak."
+
+#: src/FormPostType.php:113
+msgid "Filter payment forms list"
+msgstr "Lijst met betaalformulieren filteren"
+
+#: src/FormPostType.php:114
+msgid "Payment forms list navigation"
+msgstr "Navigatie door lijst met betaalformulieren"
+
+#: src/FormPostType.php:115
+msgid "Payment forms list"
+msgstr "Lijst met betaalformulieren"
+
+#: src/FormPostType.php:121
+msgid "Payment form published."
+msgstr "Betaalformulier gepubliceerd."
+
+#: src/FormPostType.php:122
+msgid "Payment form published privately."
+msgstr "Betaalformulier privé gepubliceerd."
+
+#: src/FormPostType.php:123
+msgid "Payment form reverted to draft."
+msgstr "Betaalformulier teruggezet naar concept."
+
+#: src/FormPostType.php:124
+msgid "Payment form scheduled."
+msgstr "Betaalformulier ingepland."
+
+#: src/FormPostType.php:125
+msgid "Payment form updated."
+msgstr "Betaalformulier bijgewerkt."
+
+#: src/FormPostType.php:138
+msgctxt "slug"
+msgid "payment-forms"
+msgstr "betaalformulieren"
+
+#: src/FormPostType.php:156
+msgid "Title"
+msgstr "Titel"
+
+#: src/FormPostType.php:157 views/meta-box-form-options.php:25
+msgid "Gateway"
+msgstr "Gateway"
+
+#: src/FormPostType.php:158
+msgid "Payments"
+msgstr "Betalingen"
+
+#: src/FormPostType.php:159
+msgid "Earnings"
+msgstr "Inkomsten"
+
+#: src/FormPostType.php:160
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: src/FormPostType.php:161
+msgid "Date"
+msgstr "Datum"
+
+#: src/FormPostType.php:289
+msgid "Form Options"
+msgstr "Formulieropties"
+
+#: src/FormPostType.php:413
+msgid "Shortcode:"
+msgstr "Shortcode:"
+
+#. translators: %s: order id
+#: src/FormProcessor.php:220
+#, php-format
+msgid "Payment Form %s"
+msgstr "Betaalformulier %s"
+
+#. translators: %s: payment data title
+#: src/FormProcessor.php:229
+#, php-format
+msgid "Payment for %s"
+msgstr "Betaling voor %s"
+
+#: src/FormProcessor.php:328
+msgid "Please enter a valid amount"
+msgstr "Vul een geldig bedrag in"
+
+#: src/FormProcessor.php:338
+msgid "Please enter your first name"
+msgstr "Vul je voornaam in"
+
+#: src/FormProcessor.php:348
+msgid "Please enter a valid email address"
+msgstr "Vul een geldig e-mailadres in"
+
+#: src/Integration.php:160 views/meta-box-form-options.php:52
+msgid "Pay Now"
+msgstr "Nu betalen"
+
+#: views/form.php:149
+msgid "Personal Info"
+msgstr "Persoonlijke gegevens"
+
+#: views/form.php:153 views/form.php:156
+msgid "First Name"
+msgstr "Voornaam"
+
+#: views/form.php:161 views/form.php:164
+msgid "Last Name"
+msgstr "Achternaam"
+
+#: views/form.php:169 views/form.php:173
+msgid "Email Address"
+msgstr "E-mailadres"
+
+#: views/form.php:178
+msgid "Payment Info"
+msgstr "Betaalgegevens"
+
+#. translators: %s: Exception message.
+#: views/form.php:227
+#, php-format
+msgid "This field could not be displayed due to the following error message: \"%s\"."
+msgstr "Dit veld kon niet worden weergegeven vanwege de volgende foutmelding: \"%s\"."
+
+#: views/form.php:255
+msgid "Error"
+msgstr "Fout"
+
+#: views/meta-box-form-options.php:46
+msgid "Button Text"
+msgstr "Knoptekst"
+
+#: views/meta-box-form-options.php:68
+msgid "Show as input field"
+msgstr "Weergeven als invoerveld"
+
+#: views/meta-box-form-options.php:69
+msgid "Show as choices"
+msgstr "Weergeven als keuzes"
+
+#: views/meta-box-form-options.php:70
+msgid "Show as choices with input field"
+msgstr "Weergeven als keuzes met invoerveld"
+
+#: views/meta-box-form-options.php:121
+msgid "Transaction description"
+msgstr "Transactieomschrijving"
+
+#: blocks-jsx/payment-form/block.json blocks/payment-form/block.json
+msgctxt "block title"
+msgid "Payment Form"
+msgstr "Betaalformulier"
