@@ -89,7 +89,7 @@ $payment_method_default = \reset( $payment_methods );
 		<?php if ( in_array( $settings['amount_method'], $methods_with_choices, true ) ) : ?>
 
 		<fieldset>
-			<legend><?php esc_html_e( 'Amount', 'pronamic_ideal' ); ?></legend>
+			<legend><?php esc_html_e( 'Amount', 'pronamic-pay-forms' ); ?></legend>
 
 		<?php endif; ?>
 
@@ -146,36 +146,36 @@ $payment_method_default = \reset( $payment_methods );
 		<?php endif; ?>
 
 		<fieldset>
-			<legend><?php esc_html_e( 'Personal Info', 'pronamic_ideal' ); ?></legend>
+			<legend><?php esc_html_e( 'Personal Info', 'pronamic-pay-forms' ); ?></legend>
 
 			<p class="pronamic-pay-form-row pronamic-pay-form-row-first">
 				<label class="pronamic-pay-label" for="pronamic-pay-first-name">
-					<?php esc_html_e( 'First Name', 'pronamic_ideal' ); ?> <span class="pronamic-pay-required-indicator">*</span>
+					<?php esc_html_e( 'First Name', 'pronamic-pay-forms' ); ?> <span class="pronamic-pay-required-indicator">*</span>
 				</label>
 
-				<input class="pronamic-pay-input pronamic-pay-required" type="text" name="pronamic_pay_first_name" placeholder="<?php esc_attr_e( 'First Name', 'pronamic_ideal' ); ?>" id="pronamic-pay-first-name" required="required" value="" />
+				<input class="pronamic-pay-input pronamic-pay-required" type="text" name="pronamic_pay_first_name" placeholder="<?php esc_attr_e( 'First Name', 'pronamic-pay-forms' ); ?>" id="pronamic-pay-first-name" required="required" value="" />
 			</p>
 
 			<p class="pronamic-pay-form-row pronamic-pay-form-row-last">
 				<label class="pronamic-pay-label" for="pronamic-pay-last-name">
-					<?php esc_html_e( 'Last Name', 'pronamic_ideal' ); ?>
+					<?php esc_html_e( 'Last Name', 'pronamic-pay-forms' ); ?>
 				</label>
 
-				<input class="pronamic-pay-input" type="text" name="pronamic_pay_last_name" id="pronamic-pay-last-name" placeholder="<?php esc_attr_e( 'Last Name', 'pronamic_ideal' ); ?>" value="" />
+				<input class="pronamic-pay-input" type="text" name="pronamic_pay_last_name" id="pronamic-pay-last-name" placeholder="<?php esc_attr_e( 'Last Name', 'pronamic-pay-forms' ); ?>" value="" />
 			</p>
 
 			<p class="pronamic-pay-form-row pronamic-pay-form-row-wide">
 				<label class="pronamic-pay-label" for="pronamic-pay-email">
-					<?php esc_html_e( 'Email Address', 'pronamic_ideal' ); ?>
+					<?php esc_html_e( 'Email Address', 'pronamic-pay-forms' ); ?>
 					<span class="pronamic-pay-required-indicator">*</span>
 				</label>
 
-				<input class="pronamic-pay-input required" type="email" name="pronamic_pay_email" placeholder="<?php esc_attr_e( 'Email Address', 'pronamic_ideal' ); ?>" id="pronamic-pay-email" required="required" value="" />
+				<input class="pronamic-pay-input required" type="email" name="pronamic_pay_email" placeholder="<?php esc_attr_e( 'Email Address', 'pronamic-pay-forms' ); ?>" id="pronamic-pay-email" required="required" value="" />
 			</p>
 		</fieldset>
 
 		<fieldset>
-			<legend><?php esc_html_e( 'Payment Info', 'pronamic_ideal' ); ?></legend>
+			<legend><?php esc_html_e( 'Payment Info', 'pronamic-pay-forms' ); ?></legend>
 
 			<ul class="pronamic-pay-payment-method-list">
 
@@ -224,7 +224,7 @@ $payment_method_default = \reset( $payment_methods );
 
 										printf(
 											/* translators: %s: Exception message. */
-											esc_html__( 'This field could not be displayed due to the following error message: "%s".', 'pronamic_ideal' ),
+											esc_html__( 'This field could not be displayed due to the following error message: "%s".', 'pronamic-pay-forms' ),
 											esc_html( $exception->getMessage() )
 										);
 
@@ -252,7 +252,7 @@ $payment_method_default = \reset( $payment_methods );
 				<?php foreach ( $pronamic_pay_errors as $e ) : ?>
 
 					<p class="pronamic-pay-error">
-						<strong><?php esc_html_e( 'Error', 'pronamic_ideal' ); ?></strong>: <?php echo esc_html( $e ); ?>
+						<strong><?php esc_html_e( 'Error', 'pronamic-pay-forms' ); ?></strong>: <?php echo esc_html( $e ); ?>
 					</p>
 
 				<?php endforeach; ?>

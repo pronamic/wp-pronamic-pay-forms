@@ -16,5 +16,5 @@
 	"editorScript": "file:./index.js",
 	"editorStyle": "pronamic-pay-forms",
 	"style": "pronamic-pay-forms",
-	"textdomain": "pronamic_ideal"
+	"textdomain": "pronamic-pay-forms"
 }

@@ -157,7 +157,7 @@ class Integration extends AbstractPluginIntegration {
 		$defaults = [
 			'amount_method' => FormPostType::AMOUNT_METHOD_INPUT_FIXED,
 			'amounts'       => [ 0 ],
-			'button_text'   => __( 'Pay Now', 'pronamic_ideal' ),
+			'button_text'   => __( 'Pay Now', 'pronamic-pay-forms' ),
 			'config_id'     => get_option( 'pronamic_pay_config_id' ),
 			'form_id'       => null,
 			'html_id'       => 'pronamic-pay-form',
@@ -190,7 +190,7 @@ class Integration extends AbstractPluginIntegration {
 	 * @return string
 	 */
 	public function source_text( $text, Payment $payment ) {
-		$text = __( 'Payment Form', 'pronamic_ideal' );
+		$text = __( 'Payment Form', 'pronamic-pay-forms' );
 
 		if ( empty( $payment->source_id ) ) {
 			return $text;
@@ -221,7 +221,7 @@ class Integration extends AbstractPluginIntegration {
 	 * @return string
 	 */
 	public function source_description( $text, Payment $payment ) {
-		$text = __( 'Payment Form', 'pronamic_ideal' ) . '<br />';
+		$text = __( 'Payment Form', 'pronamic-pay-forms' ) . '<br />';
 
 		return $text;
 	}

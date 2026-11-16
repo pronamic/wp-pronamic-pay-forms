@@ -84,9 +84,9 @@ class BlocksModule {
 				$handle,
 				'pronamic_payment_form',
 				[
-					'title'          => _x( 'Payment Form', 'Block', 'pronamic_ideal' ),
-					'label_add_form' => __( 'Add form', 'pronamic_ideal' ),
-					'label_amount'   => __( 'Amount', 'pronamic_ideal' ),
+					'title'          => _x( 'Payment Form', 'Block', 'pronamic-pay-forms' ),
+					'label_add_form' => __( 'Add form', 'pronamic-pay-forms' ),
+					'label_amount'   => __( 'Amount', 'pronamic-pay-forms' ),
 				]
 			);
 		}
@@ -145,7 +145,7 @@ class BlocksModule {
 		$gateway = Plugin::get_gateway( $config_id );
 
 		if ( null === $gateway ) {
-			return \__( 'It is currently not possible to pay via this form, please contact us for more information (error: no payment gateway found).', 'pronamic_ideal' );
+			return \__( 'It is currently not possible to pay via this form, please contact us for more information (error: no payment gateway found).', 'pronamic-pay-forms' );
 		}
 
 		$this->enqueue_styles();
@@ -163,7 +163,7 @@ class BlocksModule {
 	 * @return string
 	 */
 	public function source_text( $text, Payment $payment ) {
-		$text = __( 'Payment Form Block', 'pronamic_ideal' );
+		$text = __( 'Payment Form Block', 'pronamic-pay-forms' );
 
 		if ( empty( $payment->source_id ) ) {
 			return $text;
@@ -194,7 +194,7 @@ class BlocksModule {
 	 * @return string
 	 */
 	public function source_description( $text ) {
-		$text = __( 'Payment Form Block', 'pronamic_ideal' ) . '<br />';
+		$text = __( 'Payment Form Block', 'pronamic-pay-forms' ) . '<br />';
 
 		return $text;
 	}

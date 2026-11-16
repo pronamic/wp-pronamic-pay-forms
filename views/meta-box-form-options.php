@@ -22,7 +22,7 @@ wp_nonce_field( 'pronamic_pay_save_form_options', 'pronamic_pay_nonce' );
 	<tr>
 		<th scope="row">
 			<label for="_pronamic_payment_form_config_id">
-				<?php esc_html_e( 'Gateway', 'pronamic_ideal' ); ?>
+				<?php esc_html_e( 'Gateway', 'pronamic-pay-forms' ); ?>
 			</label>
 		</th>
 		<td>
@@ -43,19 +43,19 @@ wp_nonce_field( 'pronamic_pay_save_form_options', 'pronamic_pay_nonce' );
 	<tr>
 		<th scope="row">
 			<label for="_pronamic_payment_form_button_text">
-				<?php esc_html_e( 'Button Text', 'pronamic_ideal' ); ?>
+				<?php esc_html_e( 'Button Text', 'pronamic-pay-forms' ); ?>
 			</label>
 		</th>
 		<td>
 			<?php $button_text = get_post_meta( $post->ID, '_pronamic_payment_form_button_text', true ); ?>
 
-			<input class="regular-text" type="text" name="_pronamic_payment_form_button_text" value="<?php echo esc_attr( $button_text ); ?>" placeholder="<?php esc_attr_e( 'Pay Now', 'pronamic_ideal' ); ?>" />
+			<input class="regular-text" type="text" name="_pronamic_payment_form_button_text" value="<?php echo esc_attr( $button_text ); ?>" placeholder="<?php esc_attr_e( 'Pay Now', 'pronamic-pay-forms' ); ?>" />
 		</td>
 	</tr>
 	<tr>
 		<th scope="row">
 			<label for="_pronamic_payment_form_amount_method">
-				<?php esc_html_e( 'Amount', 'pronamic_ideal' ); ?>
+				<?php esc_html_e( 'Amount', 'pronamic-pay-forms' ); ?>
 			</label>
 		</th>
 		<td>
@@ -65,9 +65,9 @@ wp_nonce_field( 'pronamic_pay_save_form_options', 'pronamic_pay_nonce' );
 				$amount_method = get_post_meta( $post->ID, '_pronamic_payment_form_amount_method', true );
 
 				$options = [
-					\Pronamic\WordPress\Pay\Forms\FormPostType::AMOUNT_METHOD_INPUT_ONLY        => __( 'Show as input field', 'pronamic_ideal' ),
-					\Pronamic\WordPress\Pay\Forms\FormPostType::AMOUNT_METHOD_CHOICES_ONLY      => __( 'Show as choices', 'pronamic_ideal' ),
-					\Pronamic\WordPress\Pay\Forms\FormPostType::AMOUNT_METHOD_CHOICES_AND_INPUT => __( 'Show as choices with input field', 'pronamic_ideal' ),
+					\Pronamic\WordPress\Pay\Forms\FormPostType::AMOUNT_METHOD_INPUT_ONLY        => __( 'Show as input field', 'pronamic-pay-forms' ),
+					\Pronamic\WordPress\Pay\Forms\FormPostType::AMOUNT_METHOD_CHOICES_ONLY      => __( 'Show as choices', 'pronamic-pay-forms' ),
+					\Pronamic\WordPress\Pay\Forms\FormPostType::AMOUNT_METHOD_CHOICES_AND_INPUT => __( 'Show as choices with input field', 'pronamic-pay-forms' ),
 				];
 
 				foreach ( $options as $value => $name ) {
@@ -118,7 +118,7 @@ wp_nonce_field( 'pronamic_pay_save_form_options', 'pronamic_pay_nonce' );
 	<tr>
 		<th scope="row">
 			<label for="_pronamic_payment_form_description">
-				<?php esc_html_e( 'Transaction description', 'pronamic_ideal' ); ?>
+				<?php esc_html_e( 'Transaction description', 'pronamic-pay-forms' ); ?>
 			</label>
 		</th>
 		<td>

@@ -217,7 +217,7 @@ class FormProcessor {
 		if ( empty( $description ) ) {
 			$description = sprintf(
 				/* translators: %s: order id */
-				__( 'Payment Form %s', 'pronamic_ideal' ),
+				__( 'Payment Form %s', 'pronamic-pay-forms' ),
 				$order_id
 			);
 		}
@@ -226,7 +226,7 @@ class FormProcessor {
 
 		$payment->title = sprintf(
 			/* translators: %s: payment data title */
-			__( 'Payment for %s', 'pronamic_ideal' ),
+			__( 'Payment for %s', 'pronamic-pay-forms' ),
 			$description
 		);
 
@@ -325,7 +325,7 @@ class FormProcessor {
 		try {
 			$this->get_amount( $source, $source_id );
 		} catch ( \Exception $e ) {
-			$pronamic_pay_errors['amount'] = __( 'Please enter a valid amount', 'pronamic_ideal' );
+			$pronamic_pay_errors['amount'] = __( 'Please enter a valid amount', 'pronamic-pay-forms' );
 		}
 
 		// phpcs:disable WordPress.Security.NonceVerification.Missing -- Public form without nonce, so it keeps working on cached pages.
@@ -335,7 +335,7 @@ class FormProcessor {
 			$first_name = \sanitize_text_field( \wp_unslash( $_POST['pronamic_pay_first_name'] ) );
 
 			if ( empty( $first_name ) ) {
-				$pronamic_pay_errors['first_name'] = __( 'Please enter your first name', 'pronamic_ideal' );
+				$pronamic_pay_errors['first_name'] = __( 'Please enter your first name', 'pronamic-pay-forms' );
 			}
 		}
 
@@ -345,7 +345,7 @@ class FormProcessor {
 		$email = filter_input( INPUT_POST, 'pronamic_pay_email', FILTER_VALIDATE_EMAIL );
 
 		if ( empty( $email ) ) {
-			$pronamic_pay_errors['email'] = __( 'Please enter a valid email address', 'pronamic_ideal' );
+			$pronamic_pay_errors['email'] = __( 'Please enter a valid email address', 'pronamic-pay-forms' );
 		}
 
 		return empty( $pronamic_pay_errors );

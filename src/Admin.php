@@ -30,8 +30,8 @@ class Admin {
 	public function admin_menu() {
 		\add_submenu_page(
 			'pronamic_ideal',
-			\__( 'Payment Forms', 'pronamic_ideal' ),
-			\__( 'Forms', 'pronamic_ideal' ),
+			\__( 'Payment Forms', 'pronamic-pay-forms' ),
+			\__( 'Forms', 'pronamic-pay-forms' ),
 			'edit_forms',
 			'edit.php?post_type=pronamic_pay_form',
 			'',
