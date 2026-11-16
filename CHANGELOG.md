@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-11-16
+
+### Added
+
+- Added Dutch translation (`nl_NL`) and POT file.
+- Added `build`, `make-pot` and `dist-archive` Composer scripts and a `.distignore`.
+- Added Rector.
+
+### Changed
+
+- The amount and gateway configuration are now determined from the form settings on submit instead of the posted values. The fixed amount of the payment form block is signed when the form is rendered and checked on submit, and amounts must be greater than zero ([#9](https://github.com/pronamic/wp-pronamic-pay-forms/pull/9)).
+- The form style is now enqueued when a form is rendered, which covers the shortcode, the block and the form post type ([#11](https://github.com/pronamic/wp-pronamic-pay-forms/pull/11)).
+- Modernized the editor script of the payment form block: ES module imports, JSX, registration from the `block.json` metadata and generated script dependencies ([#10](https://github.com/pronamic/wp-pronamic-pay-forms/pull/10)).
+- Changed the text domain from `pronamic_ideal` to `pronamic-pay-forms`.
+- Requires WordPress 6.8, translations are loaded just-in-time and the `load_plugin_textdomain()` call is removed.
+- Requires PHP 8.3.
+- Changed the plugin and author URI to pronamic.eu.
+- Updated npm dependencies.
+
+### Composer
+
+- Changed `wp-pay/core` from `^4.10` to `^4.35`.
+- Changed `pronamic/wp-coding-standards` from `^1.3` to `^2.5`.
+- Added `rector/rector` `^2.8`.
+- Removed `pronamic/pronamic-cli`.
+
+Full set of changes: [`1.3.1...1.4.0`][1.4.0]
+
+[1.4.0]: https://github.com/pronamic/wp-pronamic-pay-forms/compare/v1.3.1...v1.4.0
+
 ## [1.3.1] - 2026-11-02
 
 ### Composer
