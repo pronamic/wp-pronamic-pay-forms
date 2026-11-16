@@ -35,7 +35,7 @@ class FormProcessor {
 	 */
 	public function __construct() {
 		// Actions.
-		add_action( 'init', [ $this, 'init' ] );
+		add_action( 'init', $this->init( ... ) );
 	}
 
 	/**
@@ -118,7 +118,7 @@ class FormProcessor {
 		// Payment forms.
 		$method  = \get_post_meta( $source_id, '_pronamic_payment_form_amount_method', true );
 		$choices = \get_post_meta( $source_id, '_pronamic_payment_form_amount_choices', true );
-		$choices = \is_array( $choices ) ? \array_map( 'intval', $choices ) : [];
+		$choices = \is_array( $choices ) ? \array_map( intval( ... ), $choices ) : [];
 
 		switch ( $method ) {
 			case FormPostType::AMOUNT_METHOD_INPUT_FIXED:
@@ -324,7 +324,7 @@ class FormProcessor {
 		// Amount.
 		try {
 			$this->get_amount( $source, $source_id );
-		} catch ( \Exception $e ) {
+		} catch ( \Exception ) {
 			$pronamic_pay_errors['amount'] = __( 'Please enter a valid amount', 'pronamic-pay-forms' );
 		}
 

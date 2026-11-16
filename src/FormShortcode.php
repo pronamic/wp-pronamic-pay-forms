@@ -19,21 +19,17 @@ namespace Pronamic\WordPress\Pay\Forms;
  */
 class FormShortcode {
 	/**
-	 * Forms integration.
-	 *
-	 * @var Integration
-	 */
-	private $integration;
-
-	/**
 	 * Constructs and initializes an post types object.
 	 *
 	 * @param Integration $integration Reference to the forms integration.
 	 */
-	public function __construct( Integration $integration ) {
-		$this->integration = $integration;
-
-		add_shortcode( 'pronamic_payment_form', [ $this, 'shortcode_form' ] );
+	public function __construct(
+		/**
+		 * Forms integration.
+		 */
+		private readonly Integration $integration
+	) {
+		add_shortcode( 'pronamic_payment_form', $this->shortcode_form( ... ) );
 	}
 
 	/**

@@ -27,19 +27,16 @@ use WP_Error;
  */
 class BlocksModule {
 	/**
-	 * Forms integration.
-	 *
-	 * @var Integration
-	 */
-	private $integration;
-
-	/**
 	 * Constructs and initializes a blocks module.
 	 *
 	 * @param Integration $integration Reference to the forms integration.
 	 */
-	public function __construct( Integration $integration ) {
-		$this->integration = $integration;
+	public function __construct(
+		/**
+		 * Forms integration.
+		 */
+		private readonly Integration $integration
+	) {
 	}
 
 	/**
@@ -51,14 +48,14 @@ class BlocksModule {
 		global $wp_version;
 
 		// Initialize.
-		add_action( 'init', [ $this, 'register_block_types' ] );
+		add_action( 'init', $this->register_block_types( ... ) );
 
-		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_styles' ] );
+		add_action( 'enqueue_block_editor_assets', $this->enqueue_styles( ... ) );
 
 		// Source text and description.
-		add_filter( 'pronamic_payment_source_url_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_url' ], 10, 2 );
-		add_filter( 'pronamic_payment_source_text_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_text' ], 10, 2 );
-		add_filter( 'pronamic_payment_source_description_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_description' ] );
+		add_filter( 'pronamic_payment_source_url_' . FormsSource::BLOCK_PAYMENT_FORM, $this->source_url( ... ), 10, 2 );
+		add_filter( 'pronamic_payment_source_text_' . FormsSource::BLOCK_PAYMENT_FORM, $this->source_text( ... ), 10, 2 );
+		add_filter( 'pronamic_payment_source_description_' . FormsSource::BLOCK_PAYMENT_FORM, $this->source_description( ... ) );
 	}
 
 	/**
@@ -70,7 +67,7 @@ class BlocksModule {
 		$block_type = register_block_type(
 			__DIR__ . '/../blocks/payment-form',
 			[
-				'render_callback' => [ $this, 'render_payment_form_block' ],
+				'render_callback' => $this->render_payment_form_block( ... ),
 			]
 		);
 
@@ -117,7 +114,7 @@ class BlocksModule {
 		if ( ! empty( $attributes['amount'] ) ) {
 			try {
 				$amounts[] = Number::from_mixed( $attributes['amount'] );
-			} catch ( \Exception $e ) {
+			} catch ( \Exception ) {
 				/**
 				 * It is possible that in the past localized numbers were stored in the amount attribute.
 				 */
@@ -125,7 +122,7 @@ class BlocksModule {
 					$parser = new NumberParser();
 
 					$amounts[] = $parser->parse( $attributes['amount'] );
-				} catch ( \Exception $e ) {
+				} catch ( \Exception ) {
 					return '';
 				}
 			}

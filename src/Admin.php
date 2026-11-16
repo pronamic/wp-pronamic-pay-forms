@@ -18,8 +18,8 @@ class Admin {
 	 * Construct and initialize forms admin.
 	 */
 	public function __construct() {
-		\add_action( 'admin_menu', [ $this, 'admin_menu' ] );
-		\add_filter( 'parent_file', [ $this, 'admin_menu_parent_file' ] );
+		\add_action( 'admin_menu', $this->admin_menu( ... ) );
+		\add_filter( 'parent_file', $this->admin_menu_parent_file( ... ) );
 	}
 
 	/**
@@ -52,11 +52,9 @@ class Admin {
 			return $parent_file;
 		}
 
-		switch ( $screen->id ) {
-			case FormPostType::POST_TYPE:
-				return 'pronamic_ideal';
-		}
-
-		return $parent_file;
+		return match ( $screen->id ) {
+			FormPostType::POST_TYPE => 'pronamic_ideal',
+			default => $parent_file,
+		};
 	}
 }

@@ -70,21 +70,21 @@ class FormPostType {
 		 *
 		 * @link https://github.com/WordPress/WordPress/blob/4.0/wp-includes/post.php#L167.
 		 */
-		add_action( 'init', [ $this, 'register_post_type' ], 0 ); // Highest priority.
+		add_action( 'init', $this->register_post_type( ... ), 0 ); // Highest priority.
 
-		add_filter( 'manage_edit-' . self::POST_TYPE . '_columns', [ $this, 'edit_columns' ] );
+		add_filter( 'manage_edit-' . self::POST_TYPE . '_columns', $this->edit_columns( ... ) );
 
-		add_action( 'manage_' . self::POST_TYPE . '_posts_custom_column', [ $this, 'custom_columns' ], 10, 2 );
+		add_action( 'manage_' . self::POST_TYPE . '_posts_custom_column', $this->custom_columns( ... ), 10, 2 );
 
 		/*
 		 * Add meta box, we use priority 9 to make sure it loads before Yoast SEO meta box.
 		 * @link https://github.com/Yoast/wordpress-seo/blob/2.3.4/admin/class-metabox.php#L20.
 		 */
-		add_action( 'add_meta_boxes', [ $this, 'add_meta_boxes' ], 9 );
+		add_action( 'add_meta_boxes', $this->add_meta_boxes( ... ), 9 );
 
-		add_action( 'save_post_' . self::POST_TYPE, [ $this, 'save_post' ] );
+		add_action( 'save_post_' . self::POST_TYPE, $this->save_post( ... ) );
 
-		add_action( 'post_submitbox_misc_actions', [ $this, 'post_submitbox_misc_actions' ] );
+		add_action( 'post_submitbox_misc_actions', $this->post_submitbox_misc_actions( ... ) );
 	}
 
 	/**
@@ -287,7 +287,7 @@ class FormPostType {
 			add_meta_box(
 				'pronamic_payment_form_options',
 				__( 'Form Options', 'pronamic-pay-forms' ),
-				[ $this, 'meta_box_form_options' ],
+				$this->meta_box_form_options( ... ),
 				$post_type,
 				'normal',
 				'high'
@@ -365,7 +365,7 @@ class FormPostType {
 				// Parse input value to money object.
 				try {
 					$amount = $money_parser->parse( $amount );
-				} catch ( \Exception $e ) {
+				} catch ( \Exception ) {
 					// Remove amount choice if parsing failed (i.e. empty string).
 					unset( $data['_pronamic_payment_form_amount_choices'][ $i ] );
 
@@ -390,7 +390,7 @@ class FormPostType {
 	 * @return string
 	 */
 	private function get_shortcode( $post_id = null ) {
-		$post_id = ( null === $post_id ) ? get_the_ID() : $post_id;
+		$post_id ??= get_the_ID();
 
 		$shortcode = sprintf( '[pronamic_payment_form id="%s"]', esc_attr( strval( $post_id ) ) );
 
