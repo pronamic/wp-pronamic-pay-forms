@@ -12,7 +12,7 @@
  * Plugin URI:        https://www.pronamic.com/
  * Description:       A modern WordPress plugin for Pronamic Pay Forms, providing a structured foundation for building scalable and maintainable plugins.
  * Version:           1.3.1
- * Requires at least: 6.7
+ * Requires at least: 6.8
  * Requires PHP:      8.2
  * Author:            Pronamic
  * Author URI:        https://www.pronamic.com/
@@ -40,13 +40,3 @@ $autoload_path = __DIR__ . '/vendor/autoload_packages.php';
 if ( \file_exists( $autoload_path ) ) {
 	require_once $autoload_path;
 }
-
-/**
- * Bootstrap.
- */
-\add_action(
-	'plugins_loaded',
-	function () {
-		\load_plugin_textdomain( 'pronamic-pay-forms', false, \dirname( \plugin_basename( __FILE__ ) ) . '/languages' );
-	}
-);
