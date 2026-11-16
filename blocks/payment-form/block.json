@@ -6,7 +6,8 @@
   "category": "pronamic-pay",
   "attributes": {
     "amount": {
-      "type": "string"
+      "type": "string",
+      "default": "0"
     }
   },
   "supports": {
