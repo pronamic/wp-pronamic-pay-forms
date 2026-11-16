@@ -58,7 +58,7 @@ class BlocksModule {
 		// Source text and description.
 		add_filter( 'pronamic_payment_source_url_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_url' ], 10, 2 );
 		add_filter( 'pronamic_payment_source_text_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_text' ], 10, 2 );
-		add_filter( 'pronamic_payment_source_description_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_description' ], 10, 2 );
+		add_filter( 'pronamic_payment_source_description_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_description' ] );
 	}
 
 	/**
@@ -189,12 +189,11 @@ class BlocksModule {
 	/**
 	 * Source description filter.
 	 *
-	 * @param string  $text    The source text to filter.
-	 * @param Payment $payment The payment for the specified source text.
+	 * @param string $text The source text to filter.
 	 *
 	 * @return string
 	 */
-	public function source_description( $text, Payment $payment ) {
+	public function source_description( $text ) {
 		$text = __( 'Payment Form Block', 'pronamic_ideal' ) . '<br />';
 
 		return $text;

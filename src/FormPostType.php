@@ -301,7 +301,7 @@ class FormPostType {
 	 * @param WP_Post $post The object for the current post/page.
 	 * @return void
 	 */
-	public function meta_box_form_options( $post ) {
+	public function meta_box_form_options( $post ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.Found -- Used in the included view.
 		include __DIR__ . '/../views/meta-box-form-options.php';
 	}
 

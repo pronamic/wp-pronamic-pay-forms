@@ -52,7 +52,7 @@ $payment_methods = $gateway->get_payment_methods(
 
 $payment_methods = array_filter(
 	$payment_methods,
-	function( $payment_method ) {
+	function ( $payment_method ) {
 		return ! in_array(
 			$payment_method->get_id(),
 			[
