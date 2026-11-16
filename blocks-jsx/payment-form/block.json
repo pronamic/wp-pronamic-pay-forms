@@ -6,8 +6,12 @@
 	"category": "pronamic-pay",
 	"attributes": {
 		"amount": {
-			"type": "string"
+			"type": "string",
+			"default": "0"
 		}
+	},
+	"supports": {
+		"html": false
 	},
 	"editorScript": "file:./index.js",
 	"editorStyle": "pronamic-pay-forms",

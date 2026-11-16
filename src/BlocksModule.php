@@ -51,7 +51,6 @@ class BlocksModule {
 		global $wp_version;
 
 		// Initialize.
-		add_action( 'init', [ $this, 'register_scripts' ] );
 		add_action( 'init', [ $this, 'register_block_types' ] );
 
 		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_styles' ] );
@@ -63,54 +62,34 @@ class BlocksModule {
 	}
 
 	/**
-	 * Register blocks.
-	 *
-	 * @return void
-	 */
-	public function register_scripts() {
-		// Register editor script.
-		$min = SCRIPT_DEBUG ? '' : '.min';
-
-		wp_register_script(
-			'pronamic-payment-form-editor',
-			plugins_url( '/blocks/payment-form/index.js', __DIR__ ),
-			[ 'wp-blocks', 'wp-components', 'wp-editor', 'wp-element' ],
-			pronamic_pay_plugin()->get_version(),
-			false
-		);
-
-		// Localize script.
-		wp_localize_script(
-			'pronamic-payment-form-editor',
-			'pronamic_payment_form',
-			[
-				'title'          => _x( 'Payment Form', 'Block', 'pronamic_ideal' ),
-				'label_add_form' => __( 'Add form', 'pronamic_ideal' ),
-				'label_amount'   => __( 'Amount', 'pronamic_ideal' ),
-			]
-		);
-	}
-
-	/**
 	 * Register block types.
 	 *
 	 * @return void
 	 */
 	public function register_block_types() {
-		register_block_type(
-			'pronamic-pay/payment-form',
+		$block_type = register_block_type(
+			__DIR__ . '/../blocks/payment-form',
 			[
-				'title'           => __( 'Payment Form', 'pronamic_ideal' ),
 				'render_callback' => [ $this, 'render_payment_form_block' ],
-				'editor_script'   => 'pronamic-payment-form-editor',
-				'attributes'      => [
-					'amount' => [
-						'type'    => 'string',
-						'default' => '0',
-					],
-				],
 			]
 		);
+
+		if ( false === $block_type ) {
+			return;
+		}
+
+		// Localize editor script.
+		foreach ( $block_type->editor_script_handles as $handle ) {
+			wp_localize_script(
+				$handle,
+				'pronamic_payment_form',
+				[
+					'title'          => _x( 'Payment Form', 'Block', 'pronamic_ideal' ),
+					'label_add_form' => __( 'Add form', 'pronamic_ideal' ),
+					'label_amount'   => __( 'Amount', 'pronamic_ideal' ),
+				]
+			);
+		}
 	}
 
 	/**
