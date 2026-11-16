@@ -168,6 +168,15 @@ class Integration extends AbstractPluginIntegration {
 
 		$settings = wp_parse_args( $args, $defaults );
 
+		/**
+		 * Enqueue the form style when a form is rendered, this works for
+		 * the shortcode, the block and the form post type content. Styles
+		 * enqueued after `wp_head` are printed late or hoisted to the head.
+		 *
+		 * @link https://github.com/pronamic/wp-pronamic-pay-forms/issues/2
+		 */
+		wp_enqueue_style( 'pronamic-pay-forms' );
+
 		// Load template.
 		ob_start();
 

@@ -34,8 +34,6 @@ class FormScripts {
 		 * @link https://github.com/WordPress/WordPress/blob/5.1/wp-includes/functions.wp-scripts.php#L28-L52
 		 */
 		add_action( 'init', $this->register( ... ) );
-
-		add_action( 'wp_enqueue_scripts', $this->enqueue( ... ) );
 	}
 
 	/**
@@ -54,22 +52,5 @@ class FormScripts {
 			[],
 			\hash_file( 'crc32b', __DIR__ . '/../' . $file ),
 		);
-	}
-
-	/**
-	 * Enqueue.
-	 *
-	 * @link https://mikejolley.com/2013/12/02/sensible-script-enqueuing-shortcodes/
-	 * @link http://wordpress.stackexchange.com/questions/165754/enqueue-scripts-styles-when-shortcode-is-present
-	 * @return void
-	 */
-	public function enqueue() {
-		if (
-			has_shortcode( get_post_field( 'post_content' ), 'pronamic_payment_form' )
-				||
-			is_singular( 'pronamic_pay_form' )
-		) {
-			wp_enqueue_style( 'pronamic-pay-forms' );
-		}
 	}
 }
