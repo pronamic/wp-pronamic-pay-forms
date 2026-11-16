@@ -19,9 +19,13 @@
 			"dealerdirect/phpcodesniffer-composer-installer": true,
 			"automattic/jetpack-autoloader": true
 		},
+		"platform": {
+			"php": "8.3"
+		},
 		"wp-slug": "pronamic-pay-forms"
 	},
 	"require": {
+		"php": "^8.3",
 		"wp-pay/core": "^4.35",
 		"automattic/jetpack-autoloader": "^5.0 || ^6.0"
 	},
