@@ -69,13 +69,13 @@ class BlocksModule {
 	 */
 	public function register_scripts() {
 		// Register editor script.
-		$min = SCRIPT_DEBUG ? '' : '.min';
+		$asset = require __DIR__ . '/../blocks/payment-form/index.asset.php';
 
 		wp_register_script(
 			'pronamic-payment-form-editor',
 			plugins_url( '/blocks/payment-form/index.js', __DIR__ ),
-			[ 'wp-blocks', 'wp-components', 'wp-editor', 'wp-element' ],
-			pronamic_pay_plugin()->get_version(),
+			$asset['dependencies'],
+			$asset['version'],
 			false
 		);
 

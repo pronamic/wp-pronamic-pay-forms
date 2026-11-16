@@ -1,109 +1,94 @@
-/* globals pronamic_payment_form */
-( function ( wp, blocks, components, editor, element ) {
-	var el = element.createElement;
-	var Fragment = element.Fragment;
-	var InspectorControls = editor.InspectorControls;
-	var Button = components.Button;
-	var Placeholder = components.Placeholder;
-	var TextControl = components.TextControl;
-	var ServerSideRender = wp.serverSideRender;
+/**
+ * WordPress dependencies
+ */
+import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
+import { registerBlockType } from '@wordpress/blocks';
+import {
+	Button,
+	PanelBody,
+	Placeholder,
+	TextControl,
+} from '@wordpress/components';
+// The default export is used because the named `ServerSideRender` export is not available in WordPress 6.8.
+import ServerSideRender from '@wordpress/server-side-render';
 
-	/**
-	 * Register payment form block type.
-	 *
-	 * @param string name     Block name.
-	 * @param object settings Block settings.
-	 *
-	 * @return WPBlock        Block if registered successfully, otherwise "undefined".
-	 */
-	blocks.registerBlockType( 'pronamic-pay/payment-form', {
-		title: pronamic_payment_form.title,
-		icon: 'money',
-		category: 'pronamic-pay',
+/**
+ * Internal dependencies
+ */
+import metadata from './block.json';
 
-		// Attributes.
-		attributes: {
-			amount: {
-				type: 'string'
-			}
-		},
+const {
+	title,
+	label_amount: labelAmount,
+	label_add_form: labelAddForm,
+} = window.pronamic_payment_form;
 
-		// Feature supports.
-		supports: {
-			// Remove support for an HTML mode.
-			html: false
-		},
+/**
+ * Edit payment form block.
+ *
+ * @param {Object}                         props               Block props.
+ * @param {Object}                         props.attributes    Block attributes.
+ * @param {( attributes: Object ) => void} props.setAttributes Function to update the block attributes.
+ *
+ * @return {Element} Element to render.
+ */
+const Edit = ( { attributes, setAttributes } ) => {
+	const { amount } = attributes;
 
-		// Edit.
-		edit: function ( props ) {
-			var amount = props.attributes.amount;
-			var hasSettingsSet = props.attributes && parseInt( amount ) > 0;
+	const blockProps = useBlockProps();
 
-			function onChangeAmount( updatedAmount ) {
-				props.setAttributes( { amount: updatedAmount } );
-			}
+	const hasAmount = parseInt( amount ) > 0;
 
-			return el( Fragment, null,
+	return (
+		<>
+			<InspectorControls>
+				<PanelBody>
+					<TextControl
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
+						type="number"
+						step="any"
+						label={ labelAmount }
+						value={ amount ?? '' }
+						onChange={ ( value ) =>
+							setAttributes( { amount: value } )
+						}
+					/>
+				</PanelBody>
+			</InspectorControls>
 
-				// Inspector controls.
-				el( InspectorControls, null,
-					el( Fragment, null,
-						el( TextControl, {
-							type: 'number',
-							step: 'any',
-							label: pronamic_payment_form.label_amount,
-							value: amount,
-							onChange: onChangeAmount
-						} )
-					)
-				),
-
-				// Setup required props.
-				! hasSettingsSet &&
-				el( Placeholder, {
-						label: pronamic_payment_form.title,
-						icon: 'money'
-					},
-					el( Fragment, null,
-						el( TextControl, {
-							type: 'number',
-							step: 'any',
-							label: pronamic_payment_form.label_amount,
-							onChange: function ( value ) {
-							},
-							onBlur: function () {
-								onChangeAmount( event.target.value );
+			<div { ...blockProps }>
+				{ hasAmount ? (
+					<ServerSideRender
+						block={ metadata.name }
+						attributes={ attributes }
+					/>
+				) : (
+					<Placeholder label={ title } icon="money">
+						<TextControl
+							__next40pxDefaultSize
+							__nextHasNoMarginBottom
+							type="number"
+							step="any"
+							label={ labelAmount }
+							onChange={ () => {} }
+							onBlur={ ( event ) =>
+								setAttributes( { amount: event.target.value } )
 							}
-						} ),
-						el( 'div',
-							{
-								style: { width: '100%' }
-							},
-							el( Button,
-								{ isPrimary: true },
-								el( Fragment, null, pronamic_payment_form.label_add_form )
-							)
-						)
-					)
-				),
+						/>
 
-				// Server side render.
-				hasSettingsSet && el( ServerSideRender, {
-					block: 'pronamic-pay/payment-form',
-					attributes: props.attributes
-				} )
-			);
-		},
+						<div style={ { width: '100%' } }>
+							<Button variant="primary">{ labelAddForm }</Button>
+						</div>
+					</Placeholder>
+				) }
+			</div>
+		</>
+	);
+};
 
-		// Save.
-		save: function () {
-			return null;
-		}
-	} );
-} )(
-	window.wp,
-	window.wp.blocks,
-	window.wp.components,
-	window.wp.blockEditor,
-	window.wp.element
-);
+registerBlockType( metadata.name, {
+	title,
+	icon: 'money',
+	edit: Edit,
+} );
